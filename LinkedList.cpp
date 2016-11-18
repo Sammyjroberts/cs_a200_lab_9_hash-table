@@ -16,9 +16,9 @@ void LinkedList::insertBack(const int i) {
     }
     else {
         back->setLink(new Node(i, nullptr));
+		back = back->getLink();
     }
     count++;
-    
 }
 
 //getFirst
@@ -30,7 +30,7 @@ Node* LinkedList::getFirst() const {
 bool LinkedList::search(const int i) const {
     bool found = false;
     Node* traverser = first;
-    while(!found) {
+	while (!found && traverser != nullptr) {
         if(traverser->getData() == i) {
             found = true;
         }
@@ -42,22 +42,20 @@ bool LinkedList::search(const int i) const {
 
 //printList
 void LinkedList::printList() const {
-    if(first == nullptr) {
-        cout << "The list is empty.";
-    }
-    else {
-        Node* traverser = first;
-        while(traverser != nullptr) {
-            cout << traverser->getData() << " ";
-            traverser = traverser->getLink();
-        }
-    }
+
+	Node* traverser = first;
+	while(traverser != nullptr) {
+		cout << traverser->getData() << " ";
+		traverser = traverser->getLink();
+	}
+    
 
 }
 
 //destructor
 LinkedList::~LinkedList() {
     Node* traverser = first;
+	count = 0;
     while(traverser != nullptr) {
         auto temp = traverser;
         traverser = traverser->getLink();

@@ -15,25 +15,26 @@ public:
 
 
 	//overloaded constructor
-
+	HTArray(const int cap);
 
 	//hashValue
-
+	int hashValue(const int i) const;
 
 	//addElement
-
+	void addElement(const int i);
 
 	//getNumOfElements
-
+	int getNumOfElements() const;
 
 	//searchKey
+	bool searchElement(const int key) const;
 
 
 	//printArray 
-
+	void printHashTable() const;
 
 	//destructor
-
+	~HTArray();
 
 private:
     LinkedList **ht;		//a pointer that points to a hash table of pointers

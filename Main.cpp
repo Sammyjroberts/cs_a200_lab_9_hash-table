@@ -14,7 +14,7 @@ int main()
 	ht.addElement(20);
 	ht.addElement(25);
 
-	ht.printHashTable();
+	ht.printHashTable();																																 bas
 
 	searchKey(ht, 20);
 	searchKey(ht, 25);
@@ -24,7 +24,7 @@ int main()
 	searchKey(ht, 100);
 
 	cout << endl;
-	system("Pause");
+	system("pause");
 	return 0;
 }
 
