@@ -1,0 +1,7 @@
+Debug/
+.vs/cs_a200_lab_9/v14
+.DS_Store
+*.sdf
+*.sln
+*.vcxproj
+*.vcxproj.filters
